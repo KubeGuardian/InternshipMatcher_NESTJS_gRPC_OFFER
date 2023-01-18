@@ -12,7 +12,7 @@ Key words: NestJS , Microservices , gRPC , API Gateway , seperate databases.
 
 you can find the rest of the services here:
 
-[https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH](https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH) :Authentification microservice
+[https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH](https://github.com/mpoyd/InternshipMatcher_NESTJS_gRPC_AUTH) :Authentication microservice
 
 [https://github.com/ayadi-mohamed/InternshipMatcher_NESTJS_gRPC_APPLICATION](https://github.com/ayadi-mohamed/InternshipMatcher_NESTJS_gRPC_APPLICATION) :Application microservice
 
@@ -20,8 +20,7 @@ you can find the rest of the services here:
 
 [https://github.com/Mouhib-hero/InternshipMatcher_NESTJS_API_Gateway](https://github.com/Mouhib-hero/InternshipMatcher_NESTJS_API_Gateway) :API Gateway
 
-[https://github.com/ayadi-mohamed/grpc-nest-proto](https://github.com/ayadi-mohamed/grpc-nest-proto) :Shared Proto Repository
-
+[https://github.com/ayadi-mohamed/grpc-nest-proto](https://github.com/ayadi-mohamed/grpc-nest-proto) :Shared Proto files and Docker compose file
 
 ## Microservices Design
 ![image](https://i.ibb.co/WHTySCg/design.png)
