@@ -58,17 +58,22 @@ export class OfferService {
 
   public async updateOffer(payload: updateRequestDto): Promise<UpdateResponseOffer> {
     const idOffer = payload.idOffer;
- 
-    const offer = await this.repository.preload({
+    const param = {
+    "idUser": payload.idUser,
+    "topic": payload.topic,
+    "description": payload.description,
+    "availability": payload.availability
+    } 
+    const newoffer = await this.repository.preload({
       idOffer,
-      ...payload
+      ...param
     });
 
-    if(! offer) {
+    if(! newoffer) {
       return { data: null, error: ['Offer not found'], status: HttpStatus.NOT_FOUND };
     }
-    await this.repository.save(offer);
-    return { data: offer, error: null, status: HttpStatus.OK };
+    const updatedOffer = await this.repository.save(newoffer);
+    return { data: updatedOffer, error: null, status: HttpStatus.OK };
   }
 
   public async softDeleteOffer({ idOffer }: softDltRequestDto): Promise<SoftDltResponseOffer> {
