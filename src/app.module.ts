@@ -5,6 +5,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { OfferModule } from './offer/offer.module';
 import { ConfigModule } from '@nestjs/config'
+import { HealthModule } from './health/health.module';
+import { PrometheusModule } from './prometheus/prometheus.module';
+import { MetricsModule } from './metrics/metrics.module';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
@@ -18,7 +22,7 @@ import { ConfigModule } from '@nestjs/config'
       entities: ['dist/**/*.entity.{ts,js}'],
       synchronize: true, // never true in production!
     }),
-    OfferModule, ConfigModule.forRoot()
+    OfferModule, ConfigModule.forRoot(), HealthModule, PrometheusModule, MetricsModule,HttpModule
   ],
   controllers: [AppController],
   providers: [AppService],
