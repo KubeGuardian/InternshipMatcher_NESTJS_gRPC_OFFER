@@ -19,6 +19,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
+    "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/typeorm-config.ts",
     "proto:install": "npm i git+https://github.com/ayadi-mohamed/grpc-nest-proto.git",
     "proto:offer": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/grpc-nest-proto/proto --ts_proto_out=src/offer/ node_modules/grpc-nest-proto/proto/offer.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb"
   },
